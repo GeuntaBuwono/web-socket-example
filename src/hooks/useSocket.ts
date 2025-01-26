@@ -1,14 +1,16 @@
 import { useEffect, useCallback, useState } from 'react';
 import { io, Socket } from 'socket.io-client';
 
+export type SenderType = 'left' | 'right';
+
 export interface Message {
   id: string;
   text: string;
-  sender: 'left' | 'right';
+  sender: SenderType;
   timestamp: number;
 }
 
-export const useSocket = (sender: 'left' | 'right') => {
+export const useSocket = (sender: SenderType) => {
   const [socket, setSocket] = useState<Socket | null>(null);
   const [messages, setMessages] = useState<Message[]>(() => {
     if (typeof window !== 'undefined') {
