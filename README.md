@@ -1,3 +1,9 @@
+## Disclaimer of demo on vercel
+
+In order to use Websockets with Vercel we'll need to use a third party service to handle your websocket connections for you. Something like Ably or Pusher, or PubNub.
+so demo on vercel will show failed to connect websocket on network. but it's updated on local storage.
+demo on vercel is only for UI and need to refresh after sending message to update the result. on local dev it's running well.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
